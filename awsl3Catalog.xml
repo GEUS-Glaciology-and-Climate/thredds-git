@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+   name="Unidata THREDDS-IDD NetCDF-OpenDAP Server" version="1.0.1">
+
+  <dataset name="Automatic_Weather_Stations">
+    
+    <metadata inherited="true">
+      <authority>GEUS</authority>
+      <dataType>Point</dataType>
+      <dataFormat>CSV</dataFormat>
+      <documentation type="rights">Freely available</documentation>
+      <documentation xlink:href="https://essd.copernicus.org/articles/13/3819/2021/" xlink:title="PROMICE documentation"></documentation>
+      <creator>
+        <name vocabulary="DIF">Robert S. Fausto</name>
+        <contact url="https://promice.org/" email="rsf@geus.dk" />
+      </creator>
+      <publisher>
+        <name vocabulary="DIF">Robert S. Fausto</name>
+        <contact url="https://promice.org/" email="rsf@geus.dk" />
+      </publisher>
+      <timeCoverage>
+        <end>present</end>
+        <!-- <duration>14 days</duration> -->
+      </timeCoverage>
+    </metadata>
+
+    <datasetScan name="metadata" id="metadata" path="metadata" location="content/">
+
+      <filter>
+        <include wildcard="*.csv" />
+        <exclude wildcard="aws-l3" atomic="false" collection="true" />
+        <exclude wildcard="aws-l3-flat" atomic="false" collection="true" />
+        <exclude wildcard="cryoclim" atomic="false" collection="true" />
+        <exclude wildcard="testdata" atomic="false" collection="true" />
+      </filter>
+
+    </datasetScan>
+
+    <dataset name="NetCDF">
+      <metadata inherited="true">
+        <authority>GEUS</authority>
+        <dataType>Point</dataType>
+        <dataFormat>NetCDF</dataFormat>
+        <documentation type="rights">Freely available</documentation>
+        <documentation xlink:href="https://essd.copernicus.org/articles/13/3819/2021/" xlink:title="PROMICE documentation"></documentation>
+        <creator>
+          <name vocabulary="DIF">Robert S. Fausto</name>
+          <contact url="https://promice.org/" email="rsf@geus.dk" />
+        </creator>
+        <publisher>
+          <name vocabulary="DIF">Robert S. Fausto</name>
+          <contact url="https://promice.org/" email="rsf@geus.dk" />
+        </publisher>
+        <timeCoverage>
+          <end>present</end>
+          <!-- <duration>14 days</duration> -->
+        </timeCoverage>
+      </metadata>
+
+      <datasetScan name="aws_l3_station" id="aws_l3_station_netcdf" path="aws_l3_station_netcdf" location="content/aws-l3/">
+
+        <filter>
+          <include wildcard="*.nc" />
+          <exclude wildcard="*.csv" />
+          <exclude wildcard="raw" atomic="false" collection="true" />
+        </filter>
+
+      </datasetScan>
+
+      <datasetScan name="aws_l3_time" id="aws_l3_time_netcdf" path="aws_l3_time_netcdf" location="content/aws-l3-flat/">
+
+        <filter>
+          <include wildcard="*.nc" />
+          <exclude wildcard="*.csv" />
+          <exclude wildcard="raw" atomic="false" collection="true" />
+        </filter>
+
+      </datasetScan>
+    </dataset>
+    <dataset name="CSV" serviceName="http">
+      <metadata inherited="true">
+        <authority>GEUS</authority>
+        <dataType>Point</dataType>
+        <dataFormat>CSV</dataFormat>
+        <documentation type="rights">Freely available</documentation>
+        <documentation xlink:href="https://essd.copernicus.org/articles/13/3819/2021/" xlink:title="PROMICE documentation"></documentation>
+        <creator>
+          <name vocabulary="DIF">Robert S. Fausto</name>
+          <contact url="https://promice.org/" email="rsf@geus.dk" />
+        </creator>
+        <publisher>
+          <name vocabulary="DIF">Robert S. Fausto</name>
+          <contact url="https://promice.org/" email="rsf@geus.dk" />
+        </publisher>
+        <timeCoverage>
+          <end>present</end>
+          <!-- <duration>14 days</duration> -->
+        </timeCoverage>
+      </metadata>
+
+      <datasetScan name="aws_l3_station" id="aws_l3_station_csv" path="aws_l3_station_csv" location="content/aws-l3/">
+
+        <filter>
+          <include wildcard="*.csv" />
+          <exclude wildcard="*.nc" />
+          <exclude wildcard="raw" atomic="false" collection="true" />
+        </filter>
+
+      </datasetScan>
+
+      <datasetScan name="aws_l3_time" id="aws_l3_time_csv" path="aws_l3_time_csv" location="content/aws-l3-flat/">
+
+        <filter>
+          <include wildcard="*.csv" />
+          <exclude wildcard="*.nc" />
+          <exclude wildcard="raw" atomic="false" collection="true" />
+        </filter>
+
+      </datasetScan>
+    </dataset>
+  </dataset>
+</catalog>
+

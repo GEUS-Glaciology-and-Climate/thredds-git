@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+   name="Unidata THREDDS-IDD NetCDF-OpenDAP Server" version="1.0.1">
+
+  <dataset name="CryoClim">
+    <metadata inherited="true">
+      <authority>GEUS</authority>
+      <dataType>Point</dataType>
+      <dataFormat>NetCDF</dataFormat>
+      <documentation type="rights">Freely available</documentation>
+      <documentation xlink:href="http://www.cryoclim.net/cryoclim/index.php/HOME" xlink:title="CryoClim documentation"></documentation>
+      <creator>
+        <name vocabulary="DIF">Robert S. Fausto</name>
+        <contact url="https://promice.org/" email="rsf@geus.dk" />
+      </creator>
+      <publisher>
+        <name vocabulary="DIF">Robert S. Fausto</name>
+        <contact url="https://promice.org/" email="rsf@geus.dk" />
+      </publisher>
+      <timeCoverage>
+        <end>present</end>
+        <!-- <duration>14 days</duration> -->
+      </timeCoverage>
+    </metadata>
+
+    <datasetScan name="MODIS_surface_type" id="MODIS_surface_type" path="MODIS_surface_type" location="content/cryoclim/surface_type">
+
+      <filter>
+        <include wildcard="*.nc" />
+      </filter>
+
+    </datasetScan>
+
+    <datasetScan name="MODIS_albedo" id="MODIS_albedo" path="MODIS_albedo" location="content/cryoclim/MODIS_albedo">
+
+      <filter>
+        <include wildcard="*.nc" />
+      </filter>
+
+    </datasetScan>
+
+    <datasetScan name="MODIS_snowline" id="MODIS_snowline" path="MODIS_snowline" location="content/cryoclim/snowline">
+
+      <filter>
+        <include wildcard="*.nc" />
+        <include wildcard="*.zip" />
+      </filter>
+
+    </datasetScan>
+
+  </dataset>
+</catalog>
+
