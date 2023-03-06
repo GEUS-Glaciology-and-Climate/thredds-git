@@ -1,0 +1,33 @@
+    <div th:fragment="banner" class="banner">
+        <h2>Welcome to
+            <th:block th:text="${webappName}"/>
+             top-level TDS Catalog.
+        </h2>
+        <h3>Hosted by
+            <a class="static" th:href="${hostInstUrl}" th:text="${hostInst}"></a>.
+        </h3>
+        <h4>Terms of service</h4>
+        <p>The Automatic Weather Station (AWS) data available here is level 3 processed (L3) and updated hourly with 
+          near-real-time transmitted data from the Greenland ice sheet. The data is considered provisional. If you will 
+          be using the data in publication (or for a public-facing service or product), please cite the relevant 
+          DOI citation listed at the <a href="https://dataverse.geus.dk/dataverse/AWS" target="_blank">GEUS Dataverse</a>. 
+          AWS data at the GEUS Dataverse is a curated archive that is updated monthly.</p>
+
+        <p>AWS data is available in both NetCDF and CSV formats, in two directory structures:</p>
+        <ul>
+          <li>"aws_l3_station" contains files in station-specific sub-directories.</li>
+          <li>"aws_l3_time" contains files for all stations in hourly, daily, and monthly sub-directories.</li>
+        </ul>
+
+        <p>"level_3" directories contain field-retrieved data from station loggers, joined with transmitted data for the period
+        since the last station visit. "tx" directories contain only L3 transmitted data, including instantaneous samples for air
+        pressure, temperature, humidity, wind speed and direction.</p>
+
+        <p>See the following links for additional information:<br>
+        <a href="https://www.promice.dk" target="_blank">https://www.promice.dk</a><br>
+        <a href="http://www.cryoclim.net" target="_blank">http://www.cryoclim.net</a>
+        </p>
+
+        <p>This is a shared public service which may experience traffic overload.
+        We reserve the right to block IP addresses that cause excessive traffic.</p>
+    </div>
