@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+   name="Unidata THREDDS-IDD NetCDF-OpenDAP Server" version="1.0.1">
+
+  <dataset name="SICE">
+    <metadata inherited="true">
+      <authority>GEUS</authority>
+      <dataType>Point</dataType>
+      <dataFormat>NetCDF</dataFormat>
+      <documentation type="rights">Freely available</documentation>
+      <documentation xlink:href="http://snow.geus.dk/" xlink:title="SICE documentation"></documentation>
+      <creator>
+        <name vocabulary="DIF">Jason E. Box</name>
+        <contact url="http://snow.geus.dk/" email="jeb@geus.dk" />
+      </creator>
+      <publisher>
+        <name vocabulary="DIF">Jason E. Box</name>
+        <contact url="http://snow.geus.dk/" email="jeb@geus.dk" />
+      </publisher>
+      <timeCoverage>
+        <end>present</end>
+        <!-- <duration>14 days</duration> -->
+      </timeCoverage>
+    </metadata>
+
+    <datasetScan name="SICE_Greenland_500m" id="SICE_Greenland_500m" path="SICE_Greenland_500m" location="content/SICE/">
+
+      <filter>
+        <include wildcard="*.nc" />
+      </filter>
+
+    </datasetScan>
+
+  </dataset>
+</catalog>
+
