@@ -5,7 +5,7 @@
   <dataset name="SICE">
     <metadata inherited="true">
       <authority>GEUS</authority>
-      <dataType>Point</dataType>
+      <dataType>Grid</dataType>
       <dataFormat>NetCDF</dataFormat>
       <documentation type="rights">Freely available</documentation>
       <documentation xlink:href="http://snow.geus.dk/" xlink:title="SICE documentation"></documentation>

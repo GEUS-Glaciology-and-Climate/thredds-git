@@ -31,6 +31,7 @@
         <exclude wildcard="aws-l3" atomic="false" collection="true" />
         <exclude wildcard="aws-l3-flat" atomic="false" collection="true" />
         <exclude wildcard="cryoclim" atomic="false" collection="true" />
+        <exclude wildcard="SICE" atomic="false" collection="true" />
         <exclude wildcard="testdata" atomic="false" collection="true" />
       </filter>
 
