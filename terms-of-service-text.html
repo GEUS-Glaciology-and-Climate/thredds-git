@@ -6,7 +6,7 @@
         <h3>Hosted by
             <a class="static" th:href="${hostInstUrl}" th:text="${hostInst}"></a>.
         </h3>
-        <h4>Terms of service</h4>
+        <h4>Automatic Weather Stations</h4>
         <p>The Automatic Weather Station (AWS) data available here is level 3 processed (L3) and updated hourly with 
           near-real-time transmitted data from the Greenland ice sheet. The data is considered provisional. If you will 
           be using the data in publication (or for a public-facing service or product), please cite the relevant 
@@ -23,11 +23,17 @@
         since the last station visit. "tx" directories contain only L3 transmitted data, including instantaneous samples for air
         pressure, temperature, humidity, wind speed and direction.</p>
 
-        <p>See the following links for additional information:<br>
-        <a href="https://www.promice.dk" target="_blank">https://www.promice.dk</a><br>
-        <a href="http://www.cryoclim.net" target="_blank">http://www.cryoclim.net</a><br>
-        <a href="http://snow.geus.dk" target="_blank">http://snow.geus.dk</a>
+        <p>See <a href="https://www.promice.dk" target="_blank">https://www.promice.dk</a> for additional information.</p>
+
+        <h4>SICE</h4>
+        <p>The Sentinel-3 Snow and Ice Products (SICE) data is the reprocessed daily product from 2017-2022 
+        also published on the <a href="https://dataverse.geus.dk/dataverse/sice" target="_blank"> GEUS Dataverse</a>.
+        The data format is in NetCDF4 and consists of every output from the SICE pipeline.
+        For now only Greenland is being reprocessed in a 500 meter spatial resolution, more regions in the arctic will follow. 
+        If you will be using the SICE data in a publication, please cite the releveant DOI on the <a href="https://dataverse.geus.dk/dataverse/sice" target="_blank"> GEUS Dataverse</a>.
         </p>
+
+        <p>See <a href="http://snow.geus.dk" target="_blank">http://snow.geus.dk</a> for additional information.</p>
 
         <p>This is a shared public service which may experience traffic overload.
         We reserve the right to block IP addresses that cause excessive traffic.</p>
